@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_buckets",
+  "info": {
+    "name": "test_bucket"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "s3_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
